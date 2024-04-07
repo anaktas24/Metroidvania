@@ -1,10 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://b47na8ir7suli"]
+[gd_scene load_steps=8 format=3 uid="uid://b47na8ir7suli"]
 
 [ext_resource type="Texture2D" uid="uid://ci1ntpg5m5cd6" path="res://icon.svg" id="1_wf5yg"]
 [ext_resource type="PackedScene" uid="uid://bxexln8eknfyw" path="res://player.tscn" id="2_gxdav"]
+[ext_resource type="Texture2D" uid="uid://dkblllybn5e6s" path="res://assets/Illustration.png" id="3_1j5lj"]
+[ext_resource type="Texture2D" uid="uid://ci1fiut2sikvf" path="res://assets/tree.png" id="4_a3nse"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t8qyq"]
 size = Vector2(1023, 124)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qagkp"]
+size = Vector2(346.013, 429.499)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_afh7v"]
+radius = 171.493
+height = 526.567
 
 [node name="World_Level_1" type="Node2D"]
 
@@ -21,3 +30,22 @@ texture = ExtResource("1_wf5yg")
 
 [node name="Player" parent="." instance=ExtResource("2_gxdav")]
 position = Vector2(268, 19)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(75, 379)
+scale = Vector2(0.395939, 0.445714)
+texture = ExtResource("3_1j5lj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
+position = Vector2(16.4166, 24.0441)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_qagkp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(603.008, 159.214)
+scale = Vector2(0.96797, 1.01686)
+texture = ExtResource("4_a3nse")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2"]
+position = Vector2(-6.20642, 22.6818)
+shape = SubResource("CapsuleShape2D_afh7v")
