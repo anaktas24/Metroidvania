@@ -49,20 +49,20 @@ offset_bottom = -10.0
 text = "STATE
 "
 
-[node name="Raycast" type="Node2D" parent="."]
+[node name="Raycasts" type="Node2D" parent="."]
 
-[node name="TopRight" type="RayCast2D" parent="Raycast"]
+[node name="TopRight" type="RayCast2D" parent="Raycasts"]
 position = Vector2(0, -10)
 target_position = Vector2(12, 0)
 
-[node name="BottomRight2" type="RayCast2D" parent="Raycast"]
+[node name="BottomRight2" type="RayCast2D" parent="Raycasts"]
 position = Vector2(0, 10)
 target_position = Vector2(12, 0)
 
-[node name="TopLeft" type="RayCast2D" parent="Raycast"]
+[node name="TopLeft" type="RayCast2D" parent="Raycasts"]
 position = Vector2(0, -10)
 target_position = Vector2(-12, 0)
 
-[node name="BottomLeft" type="RayCast2D" parent="Raycast"]
+[node name="BottomLeft" type="RayCast2D" parent="Raycasts"]
 position = Vector2(0, 10)
 target_position = Vector2(-12, 0)

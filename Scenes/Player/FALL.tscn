@@ -4,3 +4,5 @@
 
 [node name="FALL" type="Node"]
 script = ExtResource("1_b3vjf")
+
+[node name="CoyoteTimer" type="Timer" parent="."]
