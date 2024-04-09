@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ur1xls8ci71y"]
+[gd_scene load_steps=11 format=3 uid="uid://ur1xls8ci71y"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Player.gd" id="1_vm6t6"]
 [ext_resource type="Texture2D" uid="uid://ci1ntpg5m5cd6" path="res://icon.svg" id="2_gnds8"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://d4b0f3mvhm04m" path="res://Scenes/Player/IDLE.tscn" id="4_5fnp6"]
 [ext_resource type="PackedScene" uid="uid://deaw0gsf4p56p" path="res://Scenes/Player/JUMP.tscn" id="5_fy7tf"]
 [ext_resource type="PackedScene" uid="uid://o2y4bggpfu24" path="res://Scenes/Player/MOVE.tscn" id="6_4dbbb"]
+[ext_resource type="PackedScene" uid="uid://dvnhj172u7xlv" path="res://Scenes/Player/DASH.tscn" id="8_bk70m"]
+[ext_resource type="PackedScene" uid="uid://bbgfcrp1vthoq" path="res://Scenes/Player/SLIDE.tscn" id="9_i5pno"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ft6f4"]
 
@@ -35,6 +37,10 @@ script = ExtResource("3_vljpk")
 
 [node name="MOVE" parent="STATES" instance=ExtResource("6_4dbbb")]
 
+[node name="DASH" parent="STATES" instance=ExtResource("8_bk70m")]
+
+[node name="SLIDE" parent="STATES" instance=ExtResource("9_i5pno")]
+
 [node name="Label" type="Label" parent="."]
 offset_left = -18.0
 offset_top = -33.0
@@ -42,3 +48,21 @@ offset_right = 22.0
 offset_bottom = -10.0
 text = "STATE
 "
+
+[node name="Raycast" type="Node2D" parent="."]
+
+[node name="TopRight" type="RayCast2D" parent="Raycast"]
+position = Vector2(0, -10)
+target_position = Vector2(12, 0)
+
+[node name="BottomRight2" type="RayCast2D" parent="Raycast"]
+position = Vector2(0, 10)
+target_position = Vector2(12, 0)
+
+[node name="TopLeft" type="RayCast2D" parent="Raycast"]
+position = Vector2(0, -10)
+target_position = Vector2(-12, 0)
+
+[node name="BottomLeft" type="RayCast2D" parent="Raycast"]
+position = Vector2(0, 10)
+target_position = Vector2(-12, 0)
