@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://ur1xls8ci71y"]
+
+[ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_vm6t6"]
+[ext_resource type="Texture2D" uid="uid://ci1ntpg5m5cd6" path="res://icon.svg" id="2_gnds8"]
+[ext_resource type="PackedScene" uid="uid://dnca7p27j2edn" path="res://Scenes/FALL.tscn" id="3_g3rol"]
+[ext_resource type="PackedScene" uid="uid://d4b0f3mvhm04m" path="res://Scenes/IDLE.tscn" id="4_0xiqi"]
+[ext_resource type="PackedScene" uid="uid://deaw0gsf4p56p" path="res://Scenes/JUMP.tscn" id="5_2on7c"]
+[ext_resource type="PackedScene" uid="uid://o2y4bggpfu24" path="res://Scenes/MOVE.tscn" id="6_1fh0c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ft6f4"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_vm6t6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ft6f4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.3, -5.36442e-07)
+scale = Vector2(0.160938, 0.15625)
+texture = ExtResource("2_gnds8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="STATES" type="Node" parent="."]
+
+[node name="FALL" parent="STATES" instance=ExtResource("3_g3rol")]
+
+[node name="IDLE" parent="STATES" instance=ExtResource("4_0xiqi")]
+
+[node name="JUMP" parent="STATES" instance=ExtResource("5_2on7c")]
+
+[node name="MOVE" parent="STATES" instance=ExtResource("6_1fh0c")]

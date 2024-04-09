@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://o2y4bggpfu24"]
 
-[ext_resource type="Script" path="res://Scenes/IDLE.gd" id="1_mkjxf"]
+[ext_resource type="Script" path="res://Scenes/MOVE.gd" id="1_fkepf"]
 
-[node name="IDLE" type="Node"]
-script = ExtResource("1_mkjxf")
+[node name="MOVE" type="Node"]
+script = ExtResource("1_fkepf")
