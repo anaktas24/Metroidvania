@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d4b0f3mvhm04m"]
 
-[ext_resource type="Script" path="res://Scenes/IDLE.gd" id="1_45cmo"]
+[ext_resource type="Script" path="res://Scenes/Player/IDLE.gd" id="1_45cmo"]
 
 [node name="IDLE" type="Node"]
 script = ExtResource("1_45cmo")

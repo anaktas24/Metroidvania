@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://o2y4bggpfu24"]
 
-[ext_resource type="Script" path="res://Scenes/MOVE.gd" id="1_fkepf"]
+[ext_resource type="Script" path="res://Scenes/Player/MOVE.gd" id="1_fkepf"]
 
 [node name="MOVE" type="Node"]
 script = ExtResource("1_fkepf")

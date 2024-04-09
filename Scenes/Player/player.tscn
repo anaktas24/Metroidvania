@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://ur1xls8ci71y"]
+[gd_scene load_steps=9 format=3 uid="uid://ur1xls8ci71y"]
 
-[ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_vm6t6"]
+[ext_resource type="Script" path="res://Scenes/Player/Player.gd" id="1_vm6t6"]
 [ext_resource type="Texture2D" uid="uid://ci1ntpg5m5cd6" path="res://icon.svg" id="2_gnds8"]
-[ext_resource type="PackedScene" uid="uid://dnca7p27j2edn" path="res://Scenes/FALL.tscn" id="3_g3rol"]
-[ext_resource type="PackedScene" uid="uid://d4b0f3mvhm04m" path="res://Scenes/IDLE.tscn" id="4_0xiqi"]
-[ext_resource type="PackedScene" uid="uid://deaw0gsf4p56p" path="res://Scenes/JUMP.tscn" id="5_2on7c"]
-[ext_resource type="PackedScene" uid="uid://o2y4bggpfu24" path="res://Scenes/MOVE.tscn" id="6_1fh0c"]
+[ext_resource type="PackedScene" uid="uid://dnca7p27j2edn" path="res://Scenes/Player/FALL.tscn" id="3_e3a1r"]
+[ext_resource type="Script" path="res://Scenes/Player/STATES.gd" id="3_vljpk"]
+[ext_resource type="PackedScene" uid="uid://d4b0f3mvhm04m" path="res://Scenes/Player/IDLE.tscn" id="4_5fnp6"]
+[ext_resource type="PackedScene" uid="uid://deaw0gsf4p56p" path="res://Scenes/Player/JUMP.tscn" id="5_fy7tf"]
+[ext_resource type="PackedScene" uid="uid://o2y4bggpfu24" path="res://Scenes/Player/MOVE.tscn" id="6_4dbbb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ft6f4"]
 
@@ -24,11 +25,20 @@ texture = ExtResource("2_gnds8")
 zoom = Vector2(2, 2)
 
 [node name="STATES" type="Node" parent="."]
+script = ExtResource("3_vljpk")
 
-[node name="FALL" parent="STATES" instance=ExtResource("3_g3rol")]
+[node name="FALL" parent="STATES" instance=ExtResource("3_e3a1r")]
 
-[node name="IDLE" parent="STATES" instance=ExtResource("4_0xiqi")]
+[node name="IDLE" parent="STATES" instance=ExtResource("4_5fnp6")]
 
-[node name="JUMP" parent="STATES" instance=ExtResource("5_2on7c")]
+[node name="JUMP" parent="STATES" instance=ExtResource("5_fy7tf")]
 
-[node name="MOVE" parent="STATES" instance=ExtResource("6_1fh0c")]
+[node name="MOVE" parent="STATES" instance=ExtResource("6_4dbbb")]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -18.0
+offset_top = -33.0
+offset_right = 22.0
+offset_bottom = -10.0
+text = "STATE
+"
