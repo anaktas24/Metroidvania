@@ -60,6 +60,9 @@ func get_next_to_wall():
 				return Vector2.RIGHT
 			else:
 				return Vector2.LEFT
+				return Vector2.LEFT
+				
+				
 	return null
 	
 
