@@ -34,6 +34,21 @@ position = Vector2(573.5, 586)
 scale = Vector2(8.67969, 0.1875)
 texture = ExtResource("1_id1ca")
 
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(1048, 718)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(578, 588)
+shape = SubResource("RectangleShape2D_ejxf6")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4"]
+position = Vector2(573.5, 586)
+scale = Vector2(8.67969, 0.1875)
+texture = ExtResource("1_id1ca")
+
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(-307, 561)
 rotation = -1.5708
